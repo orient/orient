@@ -1,0 +1,3705 @@
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#index (for 192.168.1.117 at 2010-05-20 13:01:53) [GET]
+  [4;36;1mBiz Load (0.0ms)[0m   [0;1mMysql::Error: Table 'lezipuback_development.bizs' doesn't exist: SELECT * FROM `bizs` [0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Table 'lezipuback_development.bizs' doesn't exist: SELECT * FROM `bizs` ):
+  app/controllers/bizs_controller.rb:5:in `index'
+
+Rendered rescues/_trace (141.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-20 13:02:06) [GET]
+
+ActionController::RoutingError (No route matches "/biz" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateBizs (20100520050015)
+  [4;36;1mSQL (16.0ms)[0m   [0;1mCREATE TABLE `bizs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `area` varchar(255), `tradingArea` varchar(255), `name` varchar(255), `shopfront` varchar(255), `phone1` varchar(255), `address` varchar(255), `url` varchar(255), `transferTation` varchar(255), `description` text, `head` varchar(255), `headPhone` varchar(255), `headEmail` varchar(255), `headQQ` varchar(255), `headMsn` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100520050015')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSHOW FIELDS FROM `bizs`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `bizs`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `bizs`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-20 13:05:50) [GET]
+
+ActionController::RoutingError (No route matches "/biz" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#index (for 192.168.1.117 at 2010-05-20 13:05:59) [GET]
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` [0m
+Rendering template within layouts/bizs
+Rendering bizs/index
+Completed in 453ms (View: 437, DB: 0) | 200 OK [http://fd/bizs]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#new (for 192.168.1.117 at 2010-05-20 13:06:20) [GET]
+  [4;36;1mBiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+Rendering template within layouts/bizs
+Rendering bizs/new
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://fd/bizs/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#create (for 192.168.1.117 at 2010-05-20 13:08:33) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"VOeexbrV6+n+9GD/O1cglAP8U2oAPGktQ1rUykg+cCw=", "biz"=>{"head"=>"adfdf", "name"=>"asdfasdf", "headMsn"=>"adfdf", "shopfront"=>"asdfas", "headPhone"=>"adfadf", "headQQ"=>"adfdafdf", "url"=>"dafdfd", "transferTation"=>"adfadf", "headEmail"=>"adfadfd", "description"=>"asdfasdfad", "area"=>"adf", "phone1"=>"adfd", "tradingArea"=>"adfa", "address"=>"ddadfd"}}
+  [4;35;1mBiz Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `bizs`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mBiz Create (0.0ms)[0m   [0mINSERT INTO `bizs` (`name`, `head`, `shopfront`, `headMsn`, `updated_at`, `headPhone`, `url`, `headQQ`, `transferTation`, `area`, `description`, `headEmail`, `tradingArea`, `phone1`, `address`, `created_at`) VALUES('asdfasdf', 'adfdf', 'asdfas', 'adfdf', '2010-05-20 05:08:34', 'adfadf', 'dafdfd', 'adfdafdf', 'adfadf', 'adf', 'asdfasdfad', 'adfadfd', 'adfa', 'adfd', 'ddadfd', '2010-05-20 05:08:34')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://fd:3000/bizs/1
+Completed in 31ms (DB: 16) | 302 Found [http://fd/bizs]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-20 13:08:35) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBiz Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `bizs`[0m
+  [4;36;1mBiz Load (0.0ms)[0m   [0;1mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 1) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 46ms (View: 15, DB: 0) | 200 OK [http://fd/bizs/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#index (for 192.168.1.117 at 2010-05-20 13:08:41) [GET]
+  [4;35;1mBiz Load (16.0ms)[0m   [0mSELECT * FROM `bizs` [0m
+Rendering template within layouts/bizs
+Rendering bizs/index
+  [4;36;1mBiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+Completed in 31ms (View: 15, DB: 16) | 200 OK [http://fd/bizs]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#index (for 192.168.1.117 at 2010-05-20 15:34:11) [GET]
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` [0m
+Rendering template within layouts/bizs
+Rendering bizs/index
+  [4;36;1mBiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #44 of app/views/bizs/index.html.erb:
+41: <% end %>
+42: </table>
+43: 
+44: <%for file in @files %>
+45: File name: <%=file%>
+46: <%end%>
+47: 
+
+    app/views/bizs/index.html.erb:44
+    app/controllers/bizs_controller.rb:10:in `index'
+
+Rendered rescues/_trace (157.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#index (for 192.168.1.117 at 2010-05-20 15:35:09) [GET]
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` [0m
+Rendering template within layouts/bizs
+Rendering bizs/index
+  [4;36;1mBiz Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+Completed in 31ms (View: 0, DB: 16) | 200 OK [http://fd/bizs]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#index (for 192.168.1.117 at 2010-05-20 15:35:39) [GET]
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` [0m
+Rendering template within layouts/bizs
+Rendering bizs/index
+  [4;36;1mBiz Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+Completed in 47ms (View: 32, DB: 15) | 200 OK [http://fd/bizs]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#index (for 192.168.1.117 at 2010-05-20 15:35:45) [GET]
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` [0m
+Rendering template within layouts/bizs
+Rendering bizs/index
+  [4;36;1mBiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://fd/bizs]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#index (for 192.168.1.117 at 2010-05-20 15:36:18) [GET]
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` [0m
+Rendering template within layouts/bizs
+Rendering bizs/index
+  [4;36;1mBiz Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+Completed in 31ms (View: 16, DB: 15) | 200 OK [http://fd/bizs]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#index (for 192.168.1.117 at 2010-05-20 15:37:08) [GET]
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` [0m
+Rendering template within layouts/bizs
+Rendering bizs/index
+  [4;36;1mBiz Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+Completed in 46ms (View: 15, DB: 16) | 200 OK [http://fd/bizs]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateBizs (20100520050015)
+Migrating to AddColumnToBiz (20100520054631)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateBizs (20100520050015)
+Migrating to AddColumnToBiz (20100520054631)
+  [4;36;1mSQL (15.0ms)[0m   [0;1mALTER TABLE `bizs` ADD `productBigType` varchar(255)[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mALTER TABLE `bizs` ADD `productSmallType` varchar(255)[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mALTER TABLE `bizs` ADD `avgConsumer` decimal(8,2) DEFAULT 0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100520054631')[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `bizs`[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mdescribe `bizs`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `bizs`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#index (for 192.168.1.117 at 2010-05-21 09:59:29) [GET]
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mBiz Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `bizs`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mBiz Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `bizs`[0m
+
+NoMethodError (undefined method `validates_prosence_of' for #<Class:0x33b1c3c>):
+  app/models/biz.rb:2
+  app/controllers/bizs_controller.rb:6:in `index'
+
+Rendered rescues/_trace (140.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#index (for 192.168.1.117 at 2010-05-21 09:59:53) [GET]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mBiz Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `bizs`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mBiz Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `bizs`[0m
+
+NoMethodError (undefined method `validates_prosence_of' for #<Class:0x4ebbbe0>):
+  app/models/biz.rb:2
+  app/controllers/bizs_controller.rb:6:in `index'
+
+Rendered rescues/_trace (79.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#index (for 192.168.1.117 at 2010-05-21 10:01:26) [GET]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mBiz Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `bizs`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mBiz Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `bizs`[0m
+
+NameError (undefined local variable or method `validates_prosence_of' for #<Class:0x4dd8764>):
+  app/models/biz.rb:2
+  app/controllers/bizs_controller.rb:6:in `index'
+
+Rendered rescues/_trace (156.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#index (for 192.168.1.117 at 2010-05-21 10:03:05) [GET]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mBiz Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `bizs`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mBiz Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `bizs`[0m
+
+NoMethodError (undefined method `validates_prosence_of' for #<Class:0x4ebfc7c>):
+  app/models/biz.rb:2
+  app/controllers/bizs_controller.rb:6:in `index'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#index (for 192.168.1.117 at 2010-05-21 10:06:45) [GET]
+  [4;36;1mBiz Load (0.0ms)[0m   [0;1mSELECT * FROM `bizs` [0m
+Rendering template within layouts/bizs
+Rendering bizs/index
+  [4;35;1mBiz Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `bizs`[0m
+Completed in 579ms (View: 563, DB: 0) | 200 OK [http://fd/bizs]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#new (for 192.168.1.117 at 2010-05-21 10:06:54) [GET]
+  [4;36;1mBiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+Rendering template within layouts/bizs
+Rendering bizs/new
+Completed in 47ms (View: 32, DB: 0) | 200 OK [http://fd/bizs/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#create (for 192.168.1.117 at 2010-05-21 10:06:59) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"upWeR1BGKWRdFp53sy+UZ5vZ4YrWZ4WzV+ncRuPfZ2Y=", "biz"=>{"head"=>"", "name"=>"", "headMsn"=>"", "shopfront"=>"", "headPhone"=>"", "headQQ"=>"", "url"=>"", "transferTation"=>"", "headEmail"=>"", "description"=>"", "area"=>"", "phone1"=>"", "tradingArea"=>"", "address"=>"dd"}}
+  [4;35;1mBiz Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `bizs`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/bizs
+Rendering bizs/new
+Completed in 47ms (View: 15, DB: 0) | 200 OK [http://fd/bizs]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 10:21:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 1) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://fd/bizs/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateBizs (20100520050015)
+Migrating to AddColumnToBiz (20100520054631)
+Migrating to AddTestDataBizs (20100521022951)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateBizs (20100520050015)
+Migrating to AddColumnToBiz (20100520054631)
+Migrating to AddTestDataBizs (20100521022951)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateBizs (20100520050015)
+Migrating to AddColumnToBiz (20100520054631)
+Migrating to AddTestDataBizs (20100521022951)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateBizs (20100520050015)
+Migrating to AddColumnToBiz (20100520054631)
+Migrating to AddTestDataBizs (20100521022951)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateBizs (20100520050015)
+Migrating to AddColumnToBiz (20100520054631)
+Migrating to AddTestDataBizs (20100521022951)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateBizs (20100520050015)
+Migrating to AddColumnToBiz (20100520054631)
+Migrating to AddTestDataBizs (20100521022951)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateBizs (20100520050015)
+Migrating to AddColumnToBiz (20100520054631)
+Migrating to AddTestDataBizs (20100521022951)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateBizs (20100520050015)
+Migrating to AddColumnToBiz (20100520054631)
+Migrating to AddTestDataBizs (20100521022951)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateBizs (20100520050015)
+Migrating to AddColumnToBiz (20100520054631)
+Migrating to AddTestDataBizs (20100521022951)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateBizs (20100520050015)
+Migrating to AddColumnToBiz (20100520054631)
+Migrating to AddTestDataBizs (20100521022951)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateBizs (20100520050015)
+Migrating to AddColumnToBiz (20100520054631)
+Migrating to AddTestDataBizs (20100521022951)
+  [4;36;1mBiz Delete all (0.0ms)[0m   [0;1mDELETE FROM `bizs` [0m
+  [4;35;1mBiz Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `bizs`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mBiz Create (0.0ms)[0m   [0mINSERT INTO `bizs` (`name`, `head`, `shopfront`, `headMsn`, `updated_at`, `avgConsumer`, `headPhone`, `url`, `headQQ`, `productBigType`, `transferTation`, `area`, `description`, `headEmail`, `tradingArea`, `phone1`, `productSmallType`, `address`, `created_at`) VALUES(NULL, NULL, NULL, NULL, '2010-05-21 03:18:31', 0.0, NULL, NULL, NULL, NULL, NULL, '������', NULL, NULL, '����SOHO', NULL, NULL, NULL, '2010-05-21 03:18:31')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100521022951')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `bizs`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `bizs`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `bizs`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateBizs (20100520050015)
+Migrating to AddColumnToBiz (20100520054631)
+Migrating to AddTestDataBizs (20100521022951)
+  [4;36;1mBiz Delete all (0.0ms)[0m   [0;1mDELETE FROM `bizs` [0m
+  [4;35;1mBiz Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `bizs`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mBiz Create (0.0ms)[0m   [0mINSERT INTO `bizs` (`name`, `head`, `shopfront`, `headMsn`, `updated_at`, `avgConsumer`, `headPhone`, `url`, `headQQ`, `productBigType`, `transferTation`, `area`, `description`, `headEmail`, `tradingArea`, `phone1`, `productSmallType`, `address`, `created_at`) VALUES(NULL, NULL, NULL, NULL, '2010-05-21 03:23:01', 0.0, NULL, NULL, NULL, NULL, NULL, 'dddd', NULL, NULL, 'ddd', NULL, NULL, NULL, '2010-05-21 03:23:01')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100521022951')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSHOW FIELDS FROM `bizs`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `bizs`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `bizs`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateBizs (20100520050015)
+Migrating to AddColumnToBiz (20100520054631)
+Migrating to AddTestDataBizs (20100521022951)
+  [4;36;1mBiz Delete all (0.0ms)[0m   [0;1mDELETE FROM `bizs` [0m
+  [4;35;1mBiz Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `bizs`[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mBiz Create (0.0ms)[0m   [0mINSERT INTO `bizs` (`name`, `head`, `shopfront`, `headMsn`, `updated_at`, `avgConsumer`, `headPhone`, `url`, `headQQ`, `productBigType`, `transferTation`, `area`, `description`, `headEmail`, `tradingArea`, `phone1`, `productSmallType`, `address`, `created_at`) VALUES(NULL, NULL, NULL, NULL, '2010-05-21 03:24:15', 0.0, NULL, NULL, NULL, NULL, NULL, '����', NULL, NULL, 'ddd', NULL, NULL, NULL, '2010-05-21 03:24:15')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100521022951')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `bizs`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `bizs`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `bizs`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateBizs (20100520050015)
+Migrating to AddColumnToBiz (20100520054631)
+Migrating to AddTestDataBizs (20100521022951)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateBizs (20100520050015)
+Migrating to AddColumnToBiz (20100520054631)
+Migrating to AddTestDataBizs (20100521022951)
+  [4;36;1mBiz Delete all (0.0ms)[0m   [0;1mDELETE FROM `bizs` [0m
+  [4;35;1mBiz Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `bizs`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mBiz Create (0.0ms)[0m   [0mINSERT INTO `bizs` (`name`, `head`, `shopfront`, `headMsn`, `updated_at`, `avgConsumer`, `headPhone`, `url`, `headQQ`, `productBigType`, `transferTation`, `area`, `description`, `headEmail`, `tradingArea`, `phone1`, `productSmallType`, `address`, `created_at`) VALUES(NULL, NULL, NULL, NULL, '2010-05-21 03:36:57', 0.0, NULL, NULL, NULL, NULL, NULL, '����', NULL, NULL, 'ddd', NULL, NULL, NULL, '2010-05-21 03:36:57')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100521022951')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSHOW FIELDS FROM `bizs`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `bizs`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `bizs`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#new (for 192.168.1.117 at 2010-05-21 11:37:47) [GET]
+  [4;36;1mBiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+Rendering template within layouts/bizs
+Rendering bizs/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://fd/bizs/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#create (for 192.168.1.117 at 2010-05-21 11:37:55) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"upWeR1BGKWRdFp53sy+UZ5vZ4YrWZ4WzV+ncRuPfZ2Y=", "biz"=>{"head"=>"", "name"=>"", "headMsn"=>"", "shopfront"=>"", "headPhone"=>"", "headQQ"=>"", "url"=>"", "transferTation"=>"", "headEmail"=>"", "description"=>"", "area"=>"看看中文的问题", "phone1"=>"", "tradingArea"=>"", "address"=>""}}
+  [4;35;1mBiz Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `bizs`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mBiz Create (0.0ms)[0m   [0mINSERT INTO `bizs` (`name`, `head`, `shopfront`, `headMsn`, `updated_at`, `avgConsumer`, `headPhone`, `url`, `headQQ`, `productBigType`, `transferTation`, `area`, `description`, `headEmail`, `tradingArea`, `phone1`, `productSmallType`, `address`, `created_at`) VALUES('', '', '', '', '2010-05-21 03:37:55', 0.0, '', '', '', NULL, '', '看看中文的问题', '', '', '', '', NULL, '', '2010-05-21 03:37:55')[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://fd:3000/bizs/6
+Completed in 31ms (DB: 15) | 302 Found [http://fd/bizs]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 11:37:56) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mBiz Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `bizs`[0m
+  [4;36;1mBiz Load (0.0ms)[0m   [0;1mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 6) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://fd/bizs/6]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateBizs (20100520050015)
+Migrating to AddColumnToBiz (20100520054631)
+Migrating to AddTestDataBizs (20100521022951)
+  [4;36;1mBiz Delete all (15.0ms)[0m   [0;1mDELETE FROM `bizs` [0m
+  [4;35;1mBiz Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `bizs`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mBiz Create (0.0ms)[0m   [0mINSERT INTO `bizs` (`name`, `head`, `shopfront`, `headMsn`, `updated_at`, `avgConsumer`, `headPhone`, `url`, `headQQ`, `productBigType`, `transferTation`, `area`, `description`, `headEmail`, `tradingArea`, `phone1`, `productSmallType`, `address`, `created_at`) VALUES(NULL, NULL, NULL, NULL, '2010-05-21 03:59:57', 0.0, NULL, NULL, NULL, NULL, NULL, '������ʾ', NULL, NULL, 'ddd', NULL, NULL, NULL, '2010-05-21 03:59:57')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100521022951')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `bizs`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `bizs`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `bizs`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateBizs (20100520050015)
+Migrating to AddColumnToBiz (20100520054631)
+Migrating to AddTestDataBizs (20100521022951)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateBizs (20100520050015)
+Migrating to AddColumnToBiz (20100520054631)
+Migrating to AddTestDataBizs (20100521022951)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateBizs (20100520050015)
+Migrating to AddColumnToBiz (20100520054631)
+Migrating to AddTestDataBizs (20100521022951)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateBizs (20100520050015)
+Migrating to AddColumnToBiz (20100520054631)
+Migrating to AddTestDataBizs (20100521022951)
+  [4;36;1mBiz Delete all (15.0ms)[0m   [0;1mDELETE FROM `bizs` [0m
+  [4;35;1mBiz Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `bizs`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mBiz Create (0.0ms)[0m   [0mINSERT INTO `bizs` (`name`, `head`, `shopfront`, `headMsn`, `updated_at`, `avgConsumer`, `headPhone`, `url`, `headQQ`, `productBigType`, `transferTation`, `area`, `description`, `headEmail`, `tradingArea`, `phone1`, `productSmallType`, `address`, `created_at`) VALUES(NULL, NULL, NULL, NULL, '2010-05-21 04:04:51', 140.0, NULL, NULL, NULL, NULL, NULL, '������ʾ', NULL, NULL, 'ddd', NULL, NULL, NULL, '2010-05-21 04:04:51')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100521022951')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `bizs`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `bizs`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `bizs`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateBizs (20100520050015)
+Migrating to AddColumnToBiz (20100520054631)
+Migrating to AddTestDataBizs (20100521022951)
+  [4;36;1mBiz Delete all (16.0ms)[0m   [0;1mDELETE FROM `bizs` [0m
+  [4;35;1mBiz Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `bizs`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mBiz Create (0.0ms)[0m   [0mINSERT INTO `bizs` (`name`, `head`, `shopfront`, `headMsn`, `updated_at`, `avgConsumer`, `headPhone`, `url`, `headQQ`, `productBigType`, `transferTation`, `area`, `description`, `headEmail`, `tradingArea`, `phone1`, `productSmallType`, `address`, `created_at`) VALUES(NULL, NULL, NULL, NULL, '2010-05-21 05:28:21', 140.0, NULL, NULL, NULL, NULL, NULL, '������ʾ', NULL, NULL, 'ddd', NULL, NULL, NULL, '2010-05-21 05:28:21')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100521022951')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `bizs`[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mdescribe `bizs`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `bizs`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#index (for 192.168.1.117 at 2010-05-21 13:56:48) [GET]
+  [4;36;1mBiz Load (0.0ms)[0m   [0;1mSELECT * FROM `bizs` [0m
+Rendering template within layouts/bizs
+Rendering bizs/index
+  [4;35;1mBiz Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `bizs`[0m
+Completed in 188ms (View: 172, DB: 0) | 200 OK [http://fd/bizs]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:56:50) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-bg1.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 13:56:56) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 79ms (View: 63, DB: 0) | 200 OK [http://fd/bizs/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:56:57) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_root_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:56:57) [GET]
+
+ActionController::RoutingError (No route matches "/images/slogan.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:56:57) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/header-bg1.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:56:57) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:56:57) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_segment_right.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:56:57) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-bg1.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:56:58) [GET]
+
+ActionController::RoutingError (No route matches "/images/shop.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:56:58) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/home_checkin.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:56:58) [GET]
+
+ActionController::RoutingError (No route matches "/images/member.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:56:58) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_segment_right_end.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:56:59) [GET]
+
+ActionController::RoutingError (No route matches "/images/shop.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:56:59) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/ind_right.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:56:59) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/ind_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 13:56:59) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBiz Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 47ms (View: 15, DB: 16) | 200 OK [http://fd/bizs/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:57:00) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-footer.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:57:00) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/copyright_bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#index (for 192.168.1.117 at 2010-05-21 13:58:25) [GET]
+  [4;36;1mBiz Load (0.0ms)[0m   [0;1mSELECT * FROM `bizs` [0m
+Rendering template within layouts/bizs
+Rendering bizs/index
+  [4;35;1mBiz Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `bizs`[0m
+Completed in 359ms (View: 343, DB: 0) | 200 OK [http://fd/bizs]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:58:26) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-bg1.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 13:58:40) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBiz Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 47ms (View: 16, DB: 15) | 200 OK [http://fd/bizs/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:58:40) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-bg1.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:58:40) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:58:40) [GET]
+
+ActionController::RoutingError (No route matches "/images/shop.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:58:40) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/header-bg1.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:58:40) [GET]
+
+ActionController::RoutingError (No route matches "/images/member.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:58:40) [GET]
+
+ActionController::RoutingError (No route matches "/images/slogan.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:58:40) [GET]
+
+ActionController::RoutingError (No route matches "/images/shop.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:58:40) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_root_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:58:40) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_segment_right.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:58:40) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_segment_right_end.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:58:40) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/home_checkin.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:58:42) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/ind_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:58:42) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/ind_right.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:58:42) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/copyright_bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:58:43) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-footer.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 13:58:50) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (16.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 16ms (View: 0, DB: 16) | 200 OK [http://fd/bizs/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:58:50) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-bg1.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:58:50) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/home_checkin.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:58:50) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/header-bg1.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:58:51) [GET]
+
+ActionController::RoutingError (No route matches "/images/shop.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:58:51) [GET]
+
+ActionController::RoutingError (No route matches "/images/member.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:58:51) [GET]
+
+ActionController::RoutingError (No route matches "/images/slogan.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:58:51) [GET]
+
+ActionController::RoutingError (No route matches "/images/shop.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:58:51) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_root_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:58:51) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_segment_right.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:58:51) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_segment_right_end.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:58:51) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:58:51) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/ind_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:58:51) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/ind_right.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:58:51) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/copyright_bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 13:58:51) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-footer.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 14:04:00) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://fd/bizs/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:04:00) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-bg1.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:04:00) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:04:00) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/header-bg1.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:04:00) [GET]
+
+ActionController::RoutingError (No route matches "/images/slogan.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:04:00) [GET]
+
+ActionController::RoutingError (No route matches "/images/member.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:04:00) [GET]
+
+ActionController::RoutingError (No route matches "/images/shop.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:04:00) [GET]
+
+ActionController::RoutingError (No route matches "/images/shop.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:04:00) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_root_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:04:00) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_segment_right.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:04:00) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_segment_right_end.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:04:00) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/home_checkin.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:04:00) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/ind_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:04:00) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/ind_right.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:04:00) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/copyright_bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:04:00) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-footer.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 14:04:02) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://fd/bizs/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:04:02) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:04:02) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-bg1.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:04:02) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/header-bg1.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:04:02) [GET]
+
+ActionController::RoutingError (No route matches "/images/shop.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:04:02) [GET]
+
+ActionController::RoutingError (No route matches "/images/slogan.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:04:02) [GET]
+
+ActionController::RoutingError (No route matches "/images/member.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:04:02) [GET]
+
+ActionController::RoutingError (No route matches "/images/shop.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:04:02) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_segment_right.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:04:03) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_root_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:04:03) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_segment_right_end.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:04:03) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/home_checkin.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:04:03) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/ind_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:04:03) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/ind_right.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:04:03) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/copyright_bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:04:03) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-footer.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 14:09:57) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 78ms (View: 63, DB: 0) | 200 OK [http://fd/bizs/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:09:59) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:09:59) [GET]
+
+ActionController::RoutingError (No route matches "/images/slogan.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:09:59) [GET]
+
+ActionController::RoutingError (No route matches "/images/shop.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:09:59) [GET]
+
+ActionController::RoutingError (No route matches "/images/member.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:10:00) [GET]
+
+ActionController::RoutingError (No route matches "/images/shop.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 14:10:00) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBiz Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 31ms (View: 16, DB: 15) | 200 OK [http://fd/bizs/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:10:00) [GET]
+
+ActionController::RoutingError (No route matches "/images/shop.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:10:00) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-bg1.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 14:10:00) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://fd/bizs/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:10:00) [GET]
+
+ActionController::RoutingError (No route matches "/images/shop.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:10:01) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_segment_right.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:10:01) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/header-bg1.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:10:01) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_segment_right_end.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:10:01) [GET]
+
+ActionController::RoutingError (No route matches "/images/member.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:10:01) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_segment_right.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:10:02) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/ind_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:10:02) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_root_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:10:02) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/home_checkin.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:10:03) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/ind_right.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:10:03) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-footer.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:10:03) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/copyright_bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:10:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 14:11:04) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://fd/bizs/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:11:04) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-bg1.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:11:04) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:11:04) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/header-bg1.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:11:04) [GET]
+
+ActionController::RoutingError (No route matches "/images/slogan.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:11:04) [GET]
+
+ActionController::RoutingError (No route matches "/images/shop.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:11:04) [GET]
+
+ActionController::RoutingError (No route matches "/images/member.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:11:04) [GET]
+
+ActionController::RoutingError (No route matches "/images/shop.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:11:04) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_root_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:11:04) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_segment_right.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:11:04) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_segment_right_end.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:11:04) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/home_checkin.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:11:04) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/ind_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:11:04) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/ind_right.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:11:04) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/copyright_bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:11:04) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-footer.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 14:13:14) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (16.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 31ms (View: 0, DB: 16) | 200 OK [http://fd/bizs/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:14) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-bg1.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:14) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/header-bg1.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:14) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_root_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:15) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_segment_right.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:15) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_segment_right_end.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:15) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/home_checkin.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:15) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/ind_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:15) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/ind_right.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:15) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/copyright_bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:15) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-footer.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 14:13:23) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBiz Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 16ms (View: 0, DB: 16) | 200 OK [http://fd/bizs/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:23) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-bg1.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:23) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/header-bg1.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:23) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_root_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:23) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_segment_right.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:23) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_segment_right_end.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:23) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/home_checkin.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:23) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/ind_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:23) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/ind_right.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:23) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/copyright_bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:23) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-footer.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 14:13:23) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBiz Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 31ms (View: 15, DB: 16) | 200 OK [http://fd/bizs/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:24) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-bg1.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:24) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/header-bg1.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:24) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_root_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:24) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_segment_right.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:24) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_segment_right_end.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:24) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/home_checkin.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:24) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/ind_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:24) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/ind_right.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:24) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/copyright_bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 14:13:24) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://fd/bizs/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 14:13:24) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://fd/bizs/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 14:13:24) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://fd/bizs/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:24) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-bg1.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:24) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/header-bg1.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:25) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_root_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:25) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_segment_right.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:25) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_segment_right_end.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:25) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/home_checkin.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:25) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/ind_right.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:25) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/ind_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 14:13:25) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBiz Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 47ms (View: 15, DB: 16) | 200 OK [http://fd/bizs/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 14:13:25) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://fd/bizs/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:25) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-bg1.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:25) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/header-bg1.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:25) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_root_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:26) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_segment_right.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:26) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_segment_right_end.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:26) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/home_checkin.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:26) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/ind_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:26) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/ind_right.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:26) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/copyright_bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:13:26) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-footer.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 14:15:19) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBiz Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 15ms (View: 0, DB: 15) | 200 OK [http://fd/bizs/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 14:15:21) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBiz Columns (31.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 140ms (View: 78, DB: 31) | 200 OK [http://fd/bizs/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:15:22) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_root_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:15:22) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_segment_right.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:15:22) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/header-bg1.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 14:15:22) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 32ms (View: 0, DB: 0) | 200 OK [http://fd/bizs/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:15:22) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-bg1.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:15:22) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_segment_right.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:15:23) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/ind_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:15:23) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_segment_right_end.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:15:23) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/home_checkin.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:15:24) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/ind_right.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:15:24) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-footer.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:15:24) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/copyright_bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 14:21:34) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 78ms (View: 63, DB: 0) | 200 OK [http://fd/bizs/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:21:34) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-bg1.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:21:34) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/copyright_bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:21:34) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_root_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:21:34) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_segment_right.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:21:34) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/bc_segment_right_end.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:21:34) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/home_checkin.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:21:34) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/ind_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:21:34) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/ind_right.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:21:34) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/header-bg1.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:21:34) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-footer.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 14:25:04) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBiz Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 141ms (View: 125, DB: 16) | 200 OK [http://fd/bizs/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 14:25:06) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 125ms (View: 78, DB: 0) | 200 OK [http://fd/bizs/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:25:07) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-bg1.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:25:07) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/home_checkin.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 14:25:07) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (15.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 15ms (View: 0, DB: 15) | 200 OK [http://fd/bizs/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:25:07) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/header-bg1.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:25:07) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/ind_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:25:08) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/ind_right.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:25:08) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/copyright_bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:25:08) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-footer.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 14:27:18) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 47ms (View: 32, DB: 0) | 200 OK [http://fd/bizs/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:27:20) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/home_checkin.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:27:20) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/header-bg1.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:27:20) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-bg1.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:27:20) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/copyright_bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:27:21) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-footer.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 14:29:00) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://fd/bizs/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:29:02) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/home_checkin.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:29:02) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/header-bg1.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:29:02) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-bg1.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:29:02) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/copyright_bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:29:03) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-footer.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 14:30:58) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://fd/bizs/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:30:59) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-bg1.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:30:59) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/header-bg1.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:30:59) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/home_checkin.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:30:59) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/copyright_bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:30:59) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-footer.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 14:33:10) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://fd/bizs/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:33:10) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-bg1.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:33:10) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/header-bg1.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:33:10) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/home_checkin.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:33:10) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/copyright_bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:33:10) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-footer.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 14:34:17) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (16.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 109ms (View: 93, DB: 16) | 200 OK [http://fd/bizs/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:34:17) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-bg1.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:34:17) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/header-bg1.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:34:17) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/home_checkin.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:34:17) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/copyright_bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:34:17) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-footer.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 14:35:42) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBiz Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 47ms (View: 32, DB: 15) | 200 OK [http://fd/bizs/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:35:42) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-bg1.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:35:42) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/header-bg1.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:35:42) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/home_checkin.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:35:42) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/copyright_bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:35:42) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-footer.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 14:36:08) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 46ms (View: 31, DB: 0) | 200 OK [http://fd/bizs/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:36:08) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-bg1.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:36:08) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/header-bg1.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:36:08) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/home_checkin.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:36:08) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/copyright_bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:36:08) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-footer.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#index (for 192.168.1.117 at 2010-05-21 14:36:10) [GET]
+  [4;36;1mBiz Load (0.0ms)[0m   [0;1mSELECT * FROM `bizs` [0m
+Rendering template within layouts/bizs
+Rendering bizs/index
+  [4;35;1mBiz Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `bizs`[0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://fd/bizs]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:36:11) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-bg1.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 14:36:16) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://fd/bizs/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:36:16) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-bg1.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:36:16) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/header-bg1.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:36:16) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/home_checkin.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:36:16) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/copyright_bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:36:16) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-footer.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#edit (for 192.168.1.117 at 2010-05-21 14:36:17) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBiz Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/edit
+Completed in 47ms (View: 31, DB: 16) | 200 OK [http://fd/bizs/9/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:36:17) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-bg1.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#update (for 192.168.1.117 at 2010-05-21 14:36:33) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"/vuL66prZMV/5VzK3G225MhqMuDKFRNwhJItuga+9io=", "id"=>"9", "biz"=>{"head"=>"张建多", "name"=>"北京尚品比利商贸有限公司", "headMsn"=>"dbtanning@MSN.com", "shopfront"=>"尚品宠物-富贵园店策划似乎", "headPhone"=>"15911033885", "headQQ"=>"34556789", "url"=>"www.dbtanning.com", "transferTation"=>"乘特3、28、57、113、348、421、627、683、686、707、801、974、976路在大北窑南下车；地铁1、10号线国贸站下车", "headEmail"=>"deane.zhang@163.com", "description"=>"在寒冷干燥的北京冬天里，尽情享受流汗的畅快吧!热瑜伽是帮助身体排毒，增加身体柔韧性和耐受力的理想练习。高温瑜伽尤其针对心肺功能进行强化训练，在延展，塑造身材的同时，能使心灵沉淀，解压。圣提瑜伽会馆在北京首次开设风行北美的Moksha高温瑜伽系统课程。Moksha瑜伽的全套40个体位法，专为高温环境而设计，针对每位练习者不同程度的耐受力和平衡性，所有的姿势都能依据个人的身体状况进行调整，较之传统的高温瑜伽更加灵活与个性化。 ", "area"=>"崇文区", "phone1"=>"59000427", "tradingArea"=>"花市", "address"=>"朝阳区东三环中路建外SOHO4号楼4307"}}
+  [4;36;1mBiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mBiz Update (0.0ms)[0m   [0mUPDATE `bizs` SET `shopfront` = '尚品宠物-富贵园店策划似乎', `updated_at` = '2010-05-21 06:36:33' WHERE `id` = 9[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://fd:3000/bizs/9
+Completed in 31ms (DB: 0) | 302 Found [http://fd/bizs/9]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 14:36:33) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mBiz Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `bizs`[0m
+  [4;36;1mBiz Load (0.0ms)[0m   [0;1mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 32ms (View: 0, DB: 0) | 200 OK [http://fd/bizs/9]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:36:33) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-bg1.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:36:33) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/header-bg1.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:36:33) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/home_checkin.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:36:33) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-footer.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:36:33) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/copyright_bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 14:36:42) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mBiz Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `bizs`[0m
+  [4;36;1mBiz Load (0.0ms)[0m   [0;1mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://fd/bizs/9]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:36:42) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-bg1.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:36:42) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/header-bg1.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:36:42) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/home_checkin.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:36:42) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/copyright_bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:36:42) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-footer.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#edit (for 192.168.1.117 at 2010-05-21 14:36:54) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mBiz Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `bizs`[0m
+  [4;36;1mBiz Load (0.0ms)[0m   [0;1mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/edit
+Completed in 31ms (View: 16, DB: 15) | 200 OK [http://fd/bizs/9/edit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:36:54) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-bg1.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#update (for 192.168.1.117 at 2010-05-21 14:37:03) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"/vuL66prZMV/5VzK3G225MhqMuDKFRNwhJItuga+9io=", "id"=>"9", "biz"=>{"head"=>"张建多", "name"=>"北京尚品比利商贸有限公司", "headMsn"=>"dbtanning@MSN.com", "shopfront"=>"尚品宠物-富贵园店策划似乎ddd", "headPhone"=>"15911033885", "headQQ"=>"34556789", "url"=>"www.dbtanning.com", "transferTation"=>"乘特3、28、57、113、348、421、627、683、686、707、801、974、976路在大北窑南下车；地铁1、10号线国贸站下车", "headEmail"=>"deane.zhang@163.com", "description"=>"在寒冷干燥的北京冬天里，尽情享受流汗的畅快吧!热瑜伽是帮助身体排毒，增加身体柔韧性和耐受力的理想练习。高温瑜伽尤其针对心肺功能进行强化训练，在延展，塑造身材的同时，能使心灵沉淀，解压。圣提瑜伽会馆在北京首次开设风行北美的Moksha高温瑜伽系统课程。Moksha瑜伽的全套40个体位法，专为高温环境而设计，针对每位练习者不同程度的耐受力和平衡性，所有的姿势都能依据个人的身体状况进行调整，较之传统的高温瑜伽更加灵活与个性化。 ", "area"=>"崇文区", "phone1"=>"59000427", "tradingArea"=>"花市", "address"=>"朝阳区东三环中路建外SOHO4号楼4307"}}
+  [4;35;1mBiz Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `bizs`[0m
+  [4;36;1mBiz Load (0.0ms)[0m   [0;1mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mBiz Update (0.0ms)[0m   [0;1mUPDATE `bizs` SET `shopfront` = '尚品宠物-富贵园店策划似乎ddd', `updated_at` = '2010-05-21 06:37:03' WHERE `id` = 9[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://fd:3000/bizs/9
+Completed in 31ms (DB: 0) | 302 Found [http://fd/bizs/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 14:37:03) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBiz Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 16ms (View: 0, DB: 16) | 200 OK [http://fd/bizs/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:37:04) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-bg1.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:37:04) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/header-bg1.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:37:04) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/home_checkin.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:37:04) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/copyright_bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:37:04) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-footer.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#index (for 192.168.1.117 at 2010-05-21 14:37:10) [GET]
+  [4;36;1mBiz Load (0.0ms)[0m   [0;1mSELECT * FROM `bizs` [0m
+Rendering template within layouts/bizs
+Rendering bizs/index
+  [4;35;1mBiz Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `bizs`[0m
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://fd/bizs]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:37:10) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-bg1.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 14:37:49) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBiz Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 16ms (View: 0, DB: 16) | 200 OK [http://fd/bizs/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:37:51) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-bg1.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:37:51) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/header-bg1.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:37:51) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/home_checkin.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:37:51) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/copyright_bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:37:52) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-footer.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 14:39:11) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBiz Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 31ms (View: 15, DB: 16) | 200 OK [http://fd/bizs/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:39:13) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/home_checkin.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:39:13) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/header-bg1.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:39:13) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/copyright_bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:39:13) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-bg1.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:39:14) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-footer.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BizsController#show (for 192.168.1.117 at 2010-05-21 14:42:52) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `bizs`[0m
+  [4;35;1mBiz Load (0.0ms)[0m   [0mSELECT * FROM `bizs` WHERE (`bizs`.`id` = 9) [0m
+Rendering template within layouts/bizs
+Rendering bizs/show
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://fd/bizs/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:42:54) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-bg1.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:42:54) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/header-bg1.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:42:54) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/home_checkin.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:42:54) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/copyright_bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.117 at 2010-05-21 14:42:55) [GET]
+
+ActionController::RoutingError (No route matches "/images-v8/lzp8-footer.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)

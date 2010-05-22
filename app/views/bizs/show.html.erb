@@ -1,0 +1,203 @@
+﻿
+
+<div class="container">
+	<div class="header_wrapper">
+	<div class="content">
+		<div class="info_side f_l">
+			<p><%= link_to 'Edit', edit_biz_path(@biz) %><%= link_to 'Back', bizs_path %></p>
+			<div>
+				<div>
+					<img class="big_img" src="../../images/shop.jpg"/>
+					<img class="small_img" src="../../images/shop.jpg"/><img class="small_img" src="../../images/shop.jpg"/><img class="small_img" src="../../images/shop.jpg"/>
+				</div>
+				<p class="t_c"><span>图片</span>|<a href="">视频</a></p>
+			</div>
+			
+			<div class="hide">
+				<embed />
+				<p class="t_c"><a href="">图片</a>|<span>视频</span></p>
+			</div>
+			<div class="widgets">
+				<h2>在该店提交过位置的人</h2>
+				<p>
+					<a href="../third_space/third_space_home.html" ><img class="img25" src="../../images/member.gif" title="membername"/></a>
+					<a href="../third_space/third_space_home.html" ><img class="img25" src="../../images/member.gif" title="membername"/></a>
+					<a href="../third_space/third_space_home.html" ><img class="img25" src="../../images/member.gif" title="membername"/></a>
+					<a href="../third_space/third_space_home.html" ><img class="img25" src="../../images/member.gif" title="membername"/></a>
+					<a href="../third_space/third_space_home.html" ><img class="img25" src="../../images/member.gif" title="membername"/></a>
+					<a href="../third_space/third_space_home.html" ><img class="img25" src="../../images/member.gif" title="membername"/></a>
+					<a href="../third_space/third_space_home.html" ><img class="img25" src="../../images/member.gif" title="membername"/></a>
+					<a href="../third_space/third_space_home.html" ><img class="img25" src="../../images/member.gif" title="membername"/></a>
+					<a href="../third_space/third_space_home.html" ><img class="img25" src="../../images/member.gif" title="membername"/></a>
+					<a href="../third_space/third_space_home.html" ><img class="img25" src="../../images/member.gif" title="membername"/></a>
+				</p>	
+			</div>
+			
+			<div class="widgets">
+				<h2>附近同类TOP5店铺</h2>
+				<ul>
+					<li><a href="">店铺1</a></li>
+					<li><a href="">店铺2</a></li>
+					<li><a href="">店铺3</a></li>
+					<li><a href="">店铺4</a></li>
+					<li><a href="">店铺5</a></li>
+				</ul>
+			</div>
+			
+			<div class="widgets">
+				<h2>关于小分类的话题</h2>
+				<ul>
+					<li><a href="">话题1</a></li>
+					<li><a href="">话题2</a></li>
+					<li><a href="">话题3</a></li>
+					<li><a href="">话题4</a></li>
+					<li><a href="">话题5</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="info_main f_r">
+				<div class="product_info">
+				<h1><%=h @biz.shopfront %></h1>
+				<table>
+					<tbody>
+					<tr><td class="w80 tip">[一句描述]：</td><td>一句话描述内容</td></tr>
+					<tr><td class="tip">[娱乐作用]：</td><td>娱乐作用的内容</td></tr>
+					<tr><td class="tip">[所在商圈]：</td><td><%=h @biz.area %><%=h @biz.tradingArea %></td></tr>
+					<tr><td class="tip">[适合人群]：</td><td>男女都行 年龄不限</td></tr>
+					<tr><td class="tip">[店铺地址]：</td><td><%=h @biz.address %></td></tr>
+					<tr><td class="tip">[行车路线]：</td><td><%=h @biz.transferTation %></td></tr>
+					<tr><td class="tip">[地标建筑]：</td><td>大裤衩</td></tr>
+					<tr><td class="tip">[营业时间]：</td><td>9：00-21：00</td></tr>
+					<tr><td class="tip">[温馨提示]：</td><td></td></tr>
+					<tr><td class="tip">[首长优惠]：</td><td>首长优惠内容</td></tr>
+					</tbody>
+				</table>
+				</div>
+				<div class="product_todo">
+					<div class="shop_checkin">
+						<h1>本店抢地盘总次数 <strong>256次</strong></h1>
+						<h2>本店首长:<a class="blank_left" href="../third_space/third_space_home.html">小乐</a><span class="blank_left">抢地盘8次</span></h2>
+						<div>
+							<a class="thumbnail" href="../third_space/third_space_home.html"><img class="img50" src="../../images/member.gif" /></a><p>首长可以享受一杯免费卡布基诺<br /><a href="">如何获得首长头衔</a></p>
+						</div>
+						
+							<p class="t_c"><a class="btn" href="../space/check_in_result.html"></a></p>
+					</div>
+					<div class="reserve_box">
+						<h3>人均参考价<span>50</span>元<span>7</span>折</h3>
+						<p class="w_90 m_auto"><a class="order_btn" href="../reserve/shop_reserve_first.html"><span>马上预订</span></a></p>
+						<p class="w_90 m_auto">每次预订可获得一次额外提交本店位置的机会。<a href="">详细了解</a></p>
+						<p class="w_90 m_auto">折扣不符，享受先行赔付。</p>
+					</div>
+				
+					
+				</div>
+			
+			
+			<h1>价格详情</h1>
+			<table id="box-table-a" class="push-top">
+				<tbody>
+					<tr>
+						<th scope="col">项目名称</th>
+						<th scope="col">门市价格</th>
+						<th scope="col">乐子铺折扣</th>
+						<th scope="col">备注</th>
+					</tr>
+					<tr>
+						<td>单人消费单人消费单人消费单人消费消费单人</td>
+						<td>100</td>
+						<td>8折</td>
+						<td>单人消费单人消费单人消费单人消费</td>
+					</tr>
+					<tr>
+						<td>单人消费</td>
+						<td>100</td>
+						<td>8折</td>
+						<td>----</td>
+					</tr>
+					<tr>
+						<td>单人消费</td>
+						<td>100</td>
+						<td>8折</td>
+						<td>----</td>
+					</tr>
+				</tbody>
+			</table>
+			<p>价格举报：如果您发现有比乐子铺价格更低的，<a href="">欢迎举报……</a></p>
+		
+			
+				<h1>详细介绍</h1>
+				<p><%=h @biz.description %>
+				</p>
+			
+			
+				<h1>最新促销</h1>
+				<p>主题：<span>情侣喝咖啡，女性免费</span></p>
+				<p>时间：<span>2月1日——2月28日</span></p>
+				<p>Donec ac neque justo, fermentum bibendum dolor. Vivamus venenatis augue eu tellus tempor venenatis. Proin elit est, 
+					vulputate eget accumsan in; congue ut est.</p>
+				<p><a href="shop_promotion.html">促销详情</a></p>	
+				<!-- ////////////////////////////
+				<h1>最新活动 <a href="add_promotion.html" class="position_a right">发布活动</a></h1>
+				<p><a href="shop_activity.html">2月1日，假面舞会之夜</a></p>
+				<p><a href="shop_activity.html">2月3日，《亚马逊丛林归来》旅游经验分享讲座</a></p>
+				<p><a href="shop_activity.html">2月13日，除夕夜的焰火晚会</a></p>
+				////////////////////////////// -->
+			
+		
+			
+		</div>
+		
+		<div class="c_b"></div>
+	</div>	
+	<div class="footer">
+		<div class="footer_dl c_b">
+			<dl>
+				<dt>关于</dt>
+				<dd><a href="">乐子铺是什么</a></dd>
+				<dd><a href="">关于我们</a></dd>
+				<dd><a href="">加入我们</a></dd>
+				<dd><a href="">联系我们</a></dd>
+				<dd><a href="">友情链接</a></dd>
+			</dl>
+			<dl>
+				<dt>提交</dt>
+				<dd><a href="">什么是抢地盘</a></dd>
+				<dd><a href="">抢地盘的好处</a></dd>
+				<dd><a href="">如何抢地盘</a></dd>
+				<dd><a href="">我们如何保护隐私</a></dd>
+				<dd><a href="">什么是首长</a></dd>
+				<dd><a href="">如何成为首长</a></dd>
+			</dl>
+			<dl>
+				<dt>获得</dt>
+				<dd><a href="">首长免费消费资格</a></dd>
+				<dd><a href="">最热最新的店铺</a></dd>
+				<dd><a href="">好友分享的促销/ 评论</a></dd>
+				<dd><a href="">看看附近真实好友</a></dd>
+				<dd><a href="">免费折扣预订</a></dd>
+				<dd><a href="">每周大奖名单</a></dd>
+			</dl>
+			<dl style="border:none">
+				<dt>更多</dt>
+				<dd><a href="">手机乐子铺</a></dd>
+				<dd><a href="">给乐子铺提建议</a></dd>
+				<dd><a href="">好友分享的促销/ 评论</a></dd>
+				<dd><a href="">我们每天在进步</a></dd>
+				<dd><a href="">关注我们在：开心/ 人人/ 豆瓣</a></dd>		
+			</dl>
+		</div>
+		<div class="lezipu_copyright">
+			<p class="w_50 f_l"><span class="footer_logo">@2008-2009</span>  乐子铺 <span class="blank_left">京ICP备-09110919号</span></p>
+			<p class="w_50 f_r t_r">“人生可以更多体验”<a href="" title="返回页面顶部">返回页面顶部</a></p>
+		</div>
+	</div>
+	<div class="page_footer"></div>
+	
+
+
+</div>
+
+
+

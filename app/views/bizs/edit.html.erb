@@ -1,0 +1,68 @@
+<h1>Editing biz</h1>
+
+<% form_for(@biz) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :area %><br />
+    <%= f.text_field :area %>
+  </p>
+  <p>
+    <%= f.label :tradingArea %><br />
+    <%= f.text_field :tradingArea %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :shopfront %><br />
+    <%= f.text_field :shopfront %>
+  </p>
+  <p>
+    <%= f.label :phone1 %><br />
+    <%= f.text_field :phone1 %>
+  </p>
+  <p>
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </p>
+  <p>
+    <%= f.label :transferTation %><br />
+    <%= f.text_field :transferTation %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :head %><br />
+    <%= f.text_field :head %>
+  </p>
+  <p>
+    <%= f.label :headPhone %><br />
+    <%= f.text_field :headPhone %>
+  </p>
+  <p>
+    <%= f.label :headEmail %><br />
+    <%= f.text_field :headEmail %>
+  </p>
+  <p>
+    <%= f.label :headQQ %><br />
+    <%= f.text_field :headQQ %>
+  </p>
+  <p>
+    <%= f.label :headMsn %><br />
+    <%= f.text_field :headMsn %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @biz %> |
+<%= link_to 'Back', bizs_path %>

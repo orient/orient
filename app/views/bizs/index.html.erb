@@ -1,0 +1,47 @@
+<h1>Listing bizs</h1>
+
+<table>
+  <tr>
+    <th>Area</th>
+    <th>Tradingarea</th>
+    <th>Name</th>
+    <th>Shopfront</th>
+    <th>Phone1</th>
+    <th>Address</th>
+    <th>Url</th>
+    <th>Transfertation</th>
+    <th>Description</th>
+    <th>Head</th>
+    <th>Headphone</th>
+    <th>Heademail</th>
+    <th>Headqq</th>
+    <th>Headmsn</th>
+  </tr>
+
+<% @bizs.each do |biz| %>
+  <tr>
+    <td><%=h biz.area %></td>
+    <td><%=h biz.tradingArea %></td>
+    <td><%=h biz.name %></td>
+    <td><%=h biz.shopfront %></td>
+    <td><%=h biz.phone1 %></td>
+    <td><%=h biz.address %></td>
+    <td><%=h biz.url %></td>
+    <td><%=h biz.transferTation %></td>
+    <td><%=h biz.description %></td>
+    <td><%=h biz.head %></td>
+    <td><%=h biz.headPhone %></td>
+    <td><%=h biz.headEmail %></td>
+    <td><%=h biz.headQQ %></td>
+    <td><%=h biz.headMsn %></td>
+    <td><%= link_to 'Show', biz %></td>
+    <td><%= link_to 'Edit', edit_biz_path(biz) %></td>
+    <td><%= link_to 'Destroy', biz, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+
+<br />
+
+<%= link_to 'New biz', new_biz_path %>
